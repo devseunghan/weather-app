@@ -9,8 +9,6 @@ export default function HomeButton() {
   }
 
   return (
-    <button>
-      <button onClick={handleClick}>홈으로</button>
-    </button>
+    <button onClick={handleClick}>홈으로</button>
   )
 }
