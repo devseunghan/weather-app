@@ -5,9 +5,13 @@ import { getTime } from '@/utils/getTime'
 import RevalidateButton from '@/components/RevalidateButton'
 
 export default async function Home() {
+  const res = await getCurrentWeather('seoul')
+  const time = await getTime(res.location.tz_id)
+
   return (
     <>
       <h1>날씨 앱</h1>
+      <h3>{time.dateTime}</h3>
       <ul className={style.list}>
         <li>
           <Link href="/seoul?name=서울">서울</Link>
